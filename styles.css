@@ -1,280 +1,568 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 /*** Global Styles ***/
 html {
-  background-color: #020659;
-  color: #ffffff;
-  font-family: verdana, Geneva, Tahoma, sans-serif;
-  box-sizing: border-box;
+    background-color: #020659;
+    font-family: "verdana", "Geneva", "Tahoma", "sans-serif";
+    box-sizing: border-box;
 }
+
 body {
-  margin: 0 auto;
-  max-width: 375px;
-  background-color: #ffffff;
+    margin: 0 auto;
+    max-width: 375px;
+    background-color: #ffffff;
+    line-height: 1.25;
 }
-.banner {
-  background-image: linear-gradient(to right, #2104d9, black);
-  margin-top: 45px;
-  z-index: 0;
-  padding: 5px;
-  padding-left: 25px;
-}
-nav {
-  max-width: 375px;
-  height: 60px;
-  position: fixed;
-  top: 0;
-  background-color: #030a8c;
-  z-index: 2;
-}
+
 main {
-  background-color: #ffffff;
-  padding: 10px 0;
+    background-color: #ffffff;
+    padding: 10px 0;
 }
+
+nav {
+    width: 375px;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    background-color: #030a8c;
+    z-index: 2;
+}
+
+button {
+    margin: 10px 30px 15px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: #590242;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
 footer {
-  color: #590242;
-  text-align: center;
-  font-style: italic;
-  font-size: 0.8em;
-  padding-bottom: 5px;
+    margin-top: 20px;
+    color: #590242;
+    text-align: center;
+    font-size: 0.8em;
+    padding-bottom: 5px;
 }
+
+/*** Fonts ***/
+h1 {
+    font-size: 1.25em;
+}
+
 h1,
 h2,
 h3 {
-  text-transform: uppercase;
+    margin: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-/*** Grid Main ***/
-#trending {
-  height: 380px;
-  padding-bottom: 0px;
-  padding: 10px;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-.gridItem1 {
-  grid-column-start: 1;
-}
-#trending img {
-  margin-bottom: -20px;
-}
-audio {
-  position: relative;
-  bottom: 180px;
-  left: 5px;
-  margin-bottom: -50px;
-  left: 5px;
-}
-.songInfo {
-  background-color: #ffffffb3;
-  position: relative;
-  margin-top: -80px;
-  top: 327px;
-  z-index: 1;
-}
-.songInfo h3,
-.songInfo p {
-  padding-left: 7px;
-}
-.songInfo p {
-  margin-top: 0;
-  padding-bottom: 5px;
-}
-.songInfo h3 {
-  margin-bottom: 5px;
-  padding-top: 5px;
-}
-h1 {
-  font-size: 1.25em;
-}
+
 h2 {
-  padding-left: 20px;
-  margin-bottom: 0;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: #590242;
 }
-h2,
-.artist {
-  font-size: 1em;
-  color: #590242;
+
+.bigM {
+    font-size: 1.3em;
 }
+
+p {
+    margin: 10px 0;
+}
+
+.songName h3,
+dl {
+    margin-left: 10px;
+}
+
+dt,
+dd {
+    display: inline;
+}
+
+.songName h3 {
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
 .italic {
-  font-style: italic;
+    font-style: italic;
 }
+
+/** Banner **/
+.banner {
+    background-image: linear-gradient(to right, #2104d9, black);
+    margin-top: 60px;
+    color: #ffffff;
+    z-index: 0;
+    padding: 5px 30px 10px;
+}
+
+.banner p {
+    margin-left: 5px;
+}
+
+/*** Trending ***/
+#trending {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    color: #590242;
+}
+
+#trending .gridItem {
+    grid-column-start: 1;
+}
+
+h2:first-of-type {
+    position: relative;
+    top: 25px;
+}
+
+#trending img {
+    margin: -30px 10px -50px;
+}
+
+audio {
+    position: relative;
+    bottom: 155px;
+    left: 15px;
+}
+
+.songName {
+    padding: 0 0 5px;
+    background-color: #ffffffb3;
+    position: relative;
+    top: 281px;
+    left: 10px;
+    z-index: 1;
+}
+
+/*** Playlists ***/
 #playlists {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  overflow-x: scroll;
-  grid-gap: 25px;
-  background-color: #2699fb;
-  padding: 10px;
-  color: #ffffff;
-  text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    grid-gap: 20px;
+    background-color: #2699fb;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
 }
-#playlists div {
-  background-color: #0d8dfb;
-  padding: 10px;
+
+.playlistsGrid {
+    background-color: #0d8dfb;
+    padding: 10px;
 }
+
+#item1 h2,
+#item2 h2 {
+    padding-bottom: 25px;
+}
+
+/** Curated **/
 #curated {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  overflow-x: scroll;
-  grid-gap: 25px;
-  background-color: #030a8c;
-  padding: 10px;
-  color: #ffffff;
-  text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    grid-gap: 20px;
+    background-color: #030a8c;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
 }
-#curated div {
-  background-color: #020873;
-  padding: 10px;
+
+.curatedGrid {
+    background-color: #020873;
+    padding: 10px;
 }
 
 img + h3 {
-  margin: 0 5px;
-  font-size: 1em;
+    margin: 5px;
+    font-size: 1em;
 }
-button {
-  margin-top: 5px;
-  margin-left: 25px;
-  border-radius: 5px;
-  padding: 5px 20px;
-  background-color: #590242;
-  color: #ffffff;
-}
-/*** Menu ***/
+
+/*** Hanburger Menu ***/
 li h1 {
-  position: absolute;
-  top: 0px;
-  left: 110px;
-  display: block;
+    position: absolute;
+    top: 10px;
+    left: 105px;
+    display: block;
 }
-li {
-  text-align: center;
-  background-color: #030a8cdd;
+
+li:not(:first-child) {
+    padding: 10px 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #030a8cdd;
 }
-li:hover {
-  background-color: #590242;
+
+li:hover:not(:first-child) {
+    background-color: #590242;
 }
+
 a {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
+
 ul {
-  width: 375px;
-  margin-right: 10;
-  padding-left: 0px;
-  list-style-type: none;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
+    width: 375px;
+    margin-right: 10px;
+    padding-left: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
 }
+
 label {
-  cursor: pointer;
-  display: inline-block;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
 }
+
 label span {
-  background-color: #ffffff;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background-color 0.2s ease-out;
-  width: 18px;
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+    width: 18px;
 }
+
 label span:before,
 label span:after {
-  background: #ffffff;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
+    background: #ffffff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
 }
+
 label span:before {
-  top: 5px;
+    top: 5px;
 }
+
 label span:after {
-  top: -5px;
+    top: -5px;
 }
+
 input {
-  display: none;
+    display: none;
 }
+
 input:checked ~ ul {
-  margin-top: 0;
-  max-height: 500px;
+    margin-top: -2px;
+    max-height: 500px;
 }
+
 input:checked ~ label span {
-  background: transparent;
+    background: transparent;
 }
+
 input:checked ~ label span:before {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
+
 input:checked ~ label span:after {
-  transform: rotate(45deg);
+    transform: rotate(45deg);
 }
+
 input:checked ~ label:not(.steps) span:before,
 input:checked ~ label:not(.steps) span:after {
-  top: 0;
+    top: 0;
 }
+
 /*** Medium SetUp ***/
 @media screen and (min-width: 834px) {
-  ul {
-    overflow: visible;
-    position: absolute;
-    top: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-  li img {
-    padding: 0;
-  }
-  label span,
-  input {
-    display: none;
-  }
+    body {
+        max-width: 834px;
+    }
+
+    nav {
+        width: 834px;
+        position: absolute;
+    }
+
+    ul {
+        width: 834px;
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        display: grid;
+        grid-template-columns: 220px 1fr 1fr 1fr 1fr;
+    }
+
+    li {
+        width: 120px;
+    }
+
+    li h1 {
+        left: 5px;
+    }
+
+    li img {
+        padding: 0;
+    }
+
+    label span,
+    input {
+        display: none;
+    }
+
+    #playlists {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    #curated {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #item1 {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        height: 600px;
+    }
+
+    #item2 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        height: 600px;
+    }
+
+    .playlistsGrid {
+        height: 120px;
+        padding: 5px;
+    }
+
+    .curatedGrid {
+        height: 120px;
+        padding: 5px;
+    }
+
+    #container img {
+        float: left;
+        margin-top: 2px;
+    }
+
+    #container button {
+        width: 150px;
+        position: relative;
+        left: 220px;
+    }
+
+    button:first-of-type {
+        position: relative;
+        left: 655px;
+    }
 }
+
 /*** Audio Controls ***/
 audio::-webkit-media-controls-mute-button {
-  background-color: #ffffffff;
-  border-radius: 20px;
+    background-color: #ffffffff;
+    border-radius: 20px;
 }
+
 audio::-webkit-media-controls-play-button {
-  background-color: #ffffffff;
-  border-radius: 20px;
+    background-color: #ffffffff;
+    border-radius: 20px;
 }
+
 audio::-webkit-media-controls-enclosure {
-  background-color: #ffffff80;
+    background-color: #ffffff80;
 }
+
 /*** Scroll Bar ***/
 #trending::-webkit-scrollbar {
-  height: 12px;
+    height: 12px;
 }
+
 #trending::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 15px #590242;
+    box-shadow: inset 0 0 15px #590242;
 }
+
 #trending::-webkit-scrollbar-thumb {
-  background: #590242;
-  border-radius: 5px;
+    background: #590242;
+    border-radius: 5px;
 }
+
 #trending ::-webkit-scrollbar-thumb:hover {
-  background: #020659;
+    background: #020659;
 }
+
 #playlists::-webkit-scrollbar,
 #curated::-webkit-scrollbar {
-  height: 12px;
+    height: 12px;
 }
+
 #playlists::-webkit-scrollbar-track,
 #curated::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 15px #020659;
+    box-shadow: inset 0 0 15px #020659;
 }
+
 #playlists::-webkit-scrollbar-thumb,
 #curated::-webkit-scrollbar-thumb {
-  background: #020659;
-  border-radius: 5px;
+    background: #020659;
+    border-radius: 5px;
 }
+
 #playlists::-webkit-scrollbar-thumb:hover,
 #curated::-webkit-scrollbar-thumb:hover {
-  background: #020659;
+    background: #020659;
 }
